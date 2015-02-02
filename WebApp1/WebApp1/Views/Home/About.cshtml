@@ -1,0 +1,22 @@
+﻿@using WebApp1.Models
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@Model.Message</h3>
+
+<ul>
+    @foreach (Product product in Model.Products)
+    {
+        <li>@product.Name - @product.Price</li>
+    }
+</ul>
+
+<ul>
+    @foreach (NewsItem news in Model.News)
+    {
+        <li>@news.Description</li>
+    }
+</ul>
+
+@Model.ElapsedTime ms
